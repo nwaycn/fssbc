@@ -14,7 +14,7 @@ import (
 	"github.com/beego/i18n"
 )
 
-const VERSION = "1.2.0"
+const VERSION = "1.0.0"
 
 func eqint64(a, b int64) bool {
 	return a == b
