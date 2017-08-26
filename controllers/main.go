@@ -3,7 +3,7 @@ package controllers
 import (
 	"fmt"
 
-	"nway/fsgui_call/models"
+	"nwaycn/fssbc/models"
 
 	"os"
 	"runtime"

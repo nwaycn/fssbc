@@ -3,9 +3,9 @@ package models
 import (
 	"errors"
 	"fmt"
-	"nway/fsgui_call/entity"
-	"nway/fsgui_call/libs"
-	"nway/utils/log"
+	"nwaycn/fssbc/entity"
+	"nwaycn/fssbc/libs"
+	"nwaycn/fssbc/log"
 	"strconv"
 
 	"strings"
@@ -22,7 +22,7 @@ const (
 //返回值
 //string为返回的token，采用md5对 username+CONNECTCHAR +password 生成
 func (this *DBUser) CheckUser(username, password string) (string, error, int64) {
-	SqlStr := "SELECT id,queue_password FROM call_queue where queue_number='" + strings.Trim(username, " ") + "'"
+	SqlStr := "SELECT id,password FROM users where username='" + strings.Trim(username, " ") + "'"
 	rows, err := this.DB.Query(SqlStr)
 	defer rows.Close()
 	var id int64 = 0
@@ -75,8 +75,8 @@ func (this *DBUser) GetCount() (int, error) {
 
 func (this *DBUser) GetUser(id int64) (*entity.Juser, error) {
 	user := &entity.Juser{}
-	SqlStr := "SELECT id, queue_number, queue_password " +
-		" FROM call_queue  where id=" + strconv.FormatInt(id, 10)
+	SqlStr := "SELECT id, username, password " +
+		" FROM users  where id=" + strconv.FormatInt(id, 10)
 	rows, err := this.DB.Query(SqlStr)
 	defer rows.Close()
 	if err == nil {

@@ -1,9 +1,6 @@
 package controllers
 
 import (
-	_ "nway/utils/nway_string"
-	_ "strconv"
-
 	"github.com/astaxie/beego"
 )
 

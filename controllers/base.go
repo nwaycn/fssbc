@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"io/ioutil"
-	"nway/fsgui_call/service"
+	"nwaycn/fssbc/service"
 	"strings"
 
 	"github.com/astaxie/beego"

@@ -1,16 +1,101 @@
 [
 	{
-		"name": "号码管理",
+		"name": "全局配置",
 		"icon": "fa-ioxhost",
 		"route": "#",
 		"submenu": [
 			{
-				"name": "号码导入",
+				"name": "音视频编码",
 				"route": "number.import",
 				"action": "NumberController.Import"
 			},
 			{
-				"name": "号码清单",
+				"name": "绑定IP",
+				"route": "number.list",
+				"action": "NumberController.List"
+			} ,
+			{
+				"name": "基础配置",
+				"route": "number.list",
+				"action": "NumberController.List"
+			} 
+		]
+	},
+	{
+		"name": "访问控制",
+		"icon": "fa-ioxhost",
+		"route": "#",
+		"submenu": [
+			{
+				"name": "ACL列表",
+				"route": "number.import",
+				"action": "NumberController.Import"
+			},
+			{
+				"name": "添加ACL",
+				"route": "number.list",
+				"action": "NumberController.List"
+			} 
+		]
+	},
+	{
+		"name": "NAT管理",
+		"icon": "fa-ioxhost",
+		"route": "#",
+		"submenu": [
+			{
+				"name": "NAT列表",
+				"route": "number.import",
+				"action": "NumberController.Import"
+			},
+			{
+				"name": "添加",
+				"route": "number.list",
+				"action": "NumberController.List"
+			} 
+		]
+	},
+	{
+		"name": "媒体管理",
+		"icon": "fa-ioxhost",
+		"route": "#",
+		"submenu": [
+			{
+				"name": "媒体管理",
+				"route": "number.import",
+				"action": "NumberController.Import"
+			},
+			{
+				"name": "添加",
+				"route": "number.list",
+				"action": "NumberController.List"
+			} 
+		]
+	},
+	{
+		"name": "话单管理",
+		"icon": "fa-ioxhost",
+		"route": "#",
+		"submenu": [
+			{
+				"name": "话单清单",
+				"route": "number.import",
+				"action": "NumberController.Import"
+			}
+		]
+	},
+	{
+		"name": "系统管理",
+		"icon": "fa-ioxhost",
+		"route": "#",
+		"submenu": [
+			{
+				"name": "账号管理",
+				"route": "number.import",
+				"action": "NumberController.Import"
+			},
+			{
+				"name": "添加",
 				"route": "number.list",
 				"action": "NumberController.List"
 			} 

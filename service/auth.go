@@ -1,17 +1,15 @@
 package service
 
 import (
-	"errors"
-	"fmt"
 	"strconv"
 
 	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/orm"
+	//"github.com/astaxie/beego/orm"
 	//"github.com/lisijie/gopub/app/entity"
 	//"github.com/lisijie/gopub/app/libs"
-	"nway/fsgui_call/entity"
-	"nway/fsgui_call/libs"
-	"nway/fsgui_call/models"
+	"nwaycn/fssbc/entity"
+	"nwaycn/fssbc/libs"
+	"nwaycn/fssbc/models"
 
 	"strings"
 	//"time"
@@ -129,29 +127,30 @@ func (this *AuthService) isOpenPerm(key string) bool {
 
 // 用户登录
 func (this *AuthService) Login(userName, password string) (string, error) {
-	user, err := UserService.GetUserByName(userName)
-	if err != nil {
-		if err == orm.ErrNoRows {
-			return "", errors.New("帐号或密码错误")
-		} else {
-			return "", errors.New("系统错误")
-		}
-	}
-	fmt.Println("Password")
-	fmt.Println(libs.Md5([]byte(password + user.Salt)))
-	if user.Password != libs.Md5([]byte(password+user.Salt)) {
-		return "", errors.New("帐号或密码错误")
-	}
-	if user.Status == -1 {
-		return "", errors.New("该帐号已禁用")
-	}
+	//	user, err := UserService.GetUserByName(userName)
+	//	if err != nil {
+	//		if err == orm.ErrNoRows {
+	//			return "", errors.New("帐号或密码错误")
+	//		} else {
+	//			return "", errors.New("系统错误")
+	//		}
+	//	}
+	//	fmt.Println("Password")
+	//	fmt.Println(libs.Md5([]byte(password + user.Salt)))
+	//	if user.Password != libs.Md5([]byte(password+user.Salt)) {
+	//		return "", errors.New("帐号或密码错误")
+	//	}
+	//	if user.Status == -1 {
+	//		return "", errors.New("该帐号已禁用")
+	//	}
 
-	//user.LastLogin = time.Now()
-	//UserService.UpdateUser(user, "LastLogin")
-	//this.loginUser = user
+	//	//user.LastLogin = time.Now()
+	//	//UserService.UpdateUser(user, "LastLogin")
+	//	//this.loginUser = user
 
-	token := fmt.Sprintf("%d|%s", user.Id, libs.Md5([]byte(user.Password+user.Salt)))
-	return token, nil
+	//	token := fmt.Sprintf("%d|%s", user.Id, libs.Md5([]byte(user.Password+user.Salt)))
+	//	return token, nil
+	return "", nil
 }
 
 // 退出登录

@@ -9,8 +9,8 @@ import (
 import (
 	"database/sql"
 	_ "database/sql/driver"
-	"nway/utils/log"
-	"nway/utils/nway_db_connection"
+	"nwaycn/fssbc/log"
+	"nwaycn/fssbc/nway_db_connection"
 )
 
 type DbBase struct {

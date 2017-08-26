@@ -2,7 +2,7 @@ package service
 
 import (
 	"fmt"
-	"nway/fsgui_call/entity"
+	"nwaycn/fssbc/entity"
 )
 
 // 系统动态

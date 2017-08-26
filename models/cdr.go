@@ -3,8 +3,8 @@ package models
 import (
 	"database/sql"
 	"errors"
-	"nway/fsgui_call/entity"
-	"nway/utils/log"
+	"nwaycn/fssbc/entity"
+	"nwaycn/fssbc/log"
 	//"fmt"
 	//"strconv"
 )

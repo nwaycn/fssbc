@@ -7,7 +7,7 @@ import (
 
 	//"callback/cb_web/entity"
 
-	"nway/utils/nway_db_connection"
+	"nwaycn/fssbc/nway_db_connection"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
@@ -17,9 +17,9 @@ import (
 
 var (
 	o           orm.Ormer
-	tablePrefix string       // 表前缀
-	UserService *userService // 用户服务
-	RoleService *roleService // 角色服务
+	tablePrefix string // 表前缀
+	//UserService *userService // 用户服务
+	//RoleService *roleService // 角色服务
 	//EnvService        *envService        // 发布环境服务
 	//ServerService     *serverService     // 服务器服务
 	//ProjectService    *projectService    // 项目服务
@@ -27,7 +27,7 @@ var (
 	//TaskService       *taskService       // 任务服务
 	//DeployService     *deployService     // 部署服务
 	//RepositoryService *repositoryService // 仓库服务
-	SystemService *systemService
+	//SystemService *systemService
 	//ActionService     *actionService // 系统动态
 )
 
@@ -70,8 +70,8 @@ func MonitorConcurrent() {
 }
 
 func initService() {
-	UserService = &userService{}
-	RoleService = &roleService{}
+	//UserService = &userService{}
+	//RoleService = &roleService{}
 	//	EnvService = &envService{}
 	//	ServerService = &serverService{}
 	//	ProjectService = &projectService{}

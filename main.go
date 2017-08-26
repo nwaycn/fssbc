@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"nway/fsgui_call/controllers"
-	"nway/fsgui_call/service"
-	"nway/utils/log"
+	"nwaycn/fssbc/controllers"
+	"nwaycn/fssbc/log"
+	"nwaycn/fssbc/service"
 	"runtime"
 	"time"
 
@@ -48,7 +48,6 @@ func main() {
 	beego.Router("/login", &controllers.MainController{}, "*:Login")
 	beego.Router("/logout", &controllers.MainController{}, "*:Logout")
 	beego.Router("/profile", &controllers.MainController{}, "*:Profile")
-	beego.AutoRouter(&controllers.NumberController{})
 
 	//beego.Run()
 	httpport := beego.AppConfig.String("httpport")
