@@ -28,3 +28,6 @@ SIP And Rtp: FreeSwitch
 
 ## 8. import db/fssbc.backup
 
+## 9. modify conf/app.conf dbstring
+
+## 10. bee run
